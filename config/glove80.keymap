@@ -122,5 +122,16 @@
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                         &trans                 &trans                 &trans                 &trans                 &trans
             >;
         };
+
+        movement {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                                                                        &trans         &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans        &trans         &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LS(LEFT)  &kp LS(RIGHT)  &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LEFT      &kp DOWN       &kp UP  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans         &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                &trans         &trans  &trans     &trans  &trans
+            >;
+        };
     };
 };
