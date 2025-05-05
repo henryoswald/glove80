@@ -77,6 +77,20 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
+
+        nmeth: nmeth {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET &kp M>;
+            label = "NMETH";
+        };
+
+        pmeth: pmeth {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp M>;
+            label = "PMETH";
+        };
     };
 
     keymap {
@@ -114,12 +128,12 @@
 
         movement {
             bindings = <
-&none  &none  &none  &none  &none                                                                 &none            &none   &none      &none       &none
-&none  &none  &none  &none  &none  &none                                            &none         &none            &none   &none      &none       &none
-&none  &none  &none  &none  &none  &none                                            &kp LS(LEFT)  &kp LS(RIGHT)    &none   &none      &kp C_PLAY  &none
-&none  &none  &none  &none  &none  &none                                            &kp LEFT      &kp DOWN         &kp UP  &kp RIGHT  &none       &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp C_VOL_DN  &kp C_VOLUME_UP  &none   &none      &none       &none
-&none  &none  &none  &none  &none         &none  &none  &none  &none  &none  &none                &none            &none   &none      &none       &none
+&none  &none  &none  &none                 &none                                                                                 &none            &none           &none       &none       &none
+&none  &none  &none  &none                 &none                  &none                                            &none         &none            &none           &none       &none       &none
+&none  &none  &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none                                            &kp LS(LEFT)  &kp LS(RIGHT)    &pmeth          &nmeth      &kp C_PLAY  &none
+&none  &none  &none  &kp LEFT_BRACE        &kp RIGHT_BRACE        &mo 1                                            &kp LEFT      &kp DOWN         &kp UP          &kp RIGHT   &none       &none
+&none  &none  &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &none  &none  &none  &none  &none  &none  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PREVIOUS  &kp K_NEXT  &none       &none
+&none  &none  &none  &none                 &none                         &none  &none  &none  &none  &none  &none                &none            &none           &none       &none       &none
             >;
         };
 
