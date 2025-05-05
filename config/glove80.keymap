@@ -48,6 +48,14 @@
           tapping-term-ms = <200>;
           bindings = <&shifted>, <&kp>;
         };
+
+        browser_select_td: tap_dance_browser_select {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BROWSER_SELECT_TD";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>; // Adjust if needed
+            bindings = <&kp LA(LS(LC(LG(F))))>, <&kp LS(LC(LA(C)))>;
+        };
     };
 
     macros {
@@ -153,7 +161,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                                                                 &trans                 &trans                 &trans                 &trans                 &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans                 &trans                 &kp LS(LC(LA(C)))      &trans                 &trans                 &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(T))))  &kp LA(LS(LC(LG(F))))  &kp LS(LA(LC(LG(S))))  &kp LS(LC(LG(LA(M))))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LS(LA(LC(LG(C))))  &kp LS(LA(LC(LG(T))))  &browser_select_td     &kp LS(LA(LC(LG(S))))  &kp LS(LC(LG(LA(M))))  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LS(LA(LC(LG(O))))  &kp LS(LA(LC(LG(A))))  &kp LS(LA(LC(LG(B))))  &kp LS(LA(LC(LG(W))))  &kp LS(LA(LC(LG(L))))  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(LA(LC(LG(P))))  &trans                 &trans                 &trans                 &trans                 &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                         &trans                 &trans                 &trans                 &trans                 &trans
