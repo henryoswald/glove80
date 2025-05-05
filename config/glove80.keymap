@@ -42,11 +42,11 @@
         };
 
         as_ht: autoshift_hold_tap {
-          compatible = "zmk,behavior-hold-tap";
-          label = "AUTOSHIFT_HOLD_TAP";
-          #binding-cells = <2>;
-          tapping-term-ms = <200>;
-          bindings = <&shifted>, <&kp>;
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTOSHIFT_HOLD_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&shifted>, <&kp>;
         };
 
         browser_select_td: tap_dance_browser_select {
@@ -109,29 +109,28 @@
         };
 
         shifted: macro_shifted_kp {
-          #binding-cells = <1>;
-          label = "MACRO_SHIFTED_KP";
-          compatible = "zmk,behavior-macro-one-param";
-          bindings =
-            <&macro_press &kp LSHFT>,
-            <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>,
-            <&macro_release &kp LSHFT>;
+            #binding-cells = <1>;
+            label = "MACRO_SHIFTED_KP";
+            compatible = "zmk,behavior-macro-one-param";
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
 
         as: autoshift {
-          compatible = "zmk,behavior-macro-one-param";
-          #binding-cells = <1>;
-          label = "AUTOSHIFT_KP";
-          bindings =
-            <&macro_press>,
-            <&macro_param_1to1>,
-            <&macro_param_1to2>,
-            <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
-            <&macro_pause_for_release>,
-            <&macro_release>,
-            <&macro_param_1to1>,
-            <&macro_param_1to2>,
-            <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            label = "AUTOSHIFT_KP";
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
         };
     };
 
@@ -148,12 +147,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp ESCAPE        &kp F2    &kp F3   &kp F4    &kp F5                                                                                                          &kp F6  &kp F7     &kp F8    &kp F9    &kp F10
-&kp GRAVE         &as N1    &as N2   &as N3    &as N4     &as N5                                                                                       &as N6  &as N7  &as N8     &as N9    &as N0    &as MINUS
-&kp GRAVE         &kp Q     &kp W    &kp E     &kp R      &kp T                                                                                        &kp Y   &kp U   &kp I      &kp O     &kp P     &as EQUAL
-&kp LEFT_CONTROL  &kp A     &kp S    &kp D     &kp F      &kp G                                                                                        &kp H   &kp J   &kp K      &kp L     &as SEMI  &as SQT
-&kp LEFT_SHIFT    &kp Z     &kp X    &kp C     &kp V      &kp B   &kp LSHFT         &kp LCTRL    &mo 1     &kp LGUI          &kp TAB  &kp TAB          &kp N   &kp M   &as COMMA  &as DOT   &kp FSLH  &as NON_US_BACKSLASH
-&magic 3 0        &kp HOME  &kp END  &kp LEFT  &kp RIGHT          &kp LEFT_COMMAND  &lt 2 SPACE  &kp LALT  &kp LEFT_CONTROL  &kp RET  &lt 1 BACKSPACE          &kp UP  &kp DOWN   &as LBKT  &as RBKT  &kp PG_DN
+&kp ESCAPE        &kp F2    &kp F3   &kp F4  &kp F5                                                                                                       &kp F6  &kp F7     &kp F8    &kp F9    &kp F10
+&kp GRAVE         &as N1    &as N2   &as N3  &as N4  &as N5                                                                                       &as N6  &as N7  &as N8     &as N9    &as N0    &as MINUS
+&kp GRAVE         &kp Q     &kp W    &kp E   &kp R   &kp T                                                                                        &kp Y   &kp U   &kp I      &kp O     &kp P     &as EQUAL
+&kp LEFT_CONTROL  &kp A     &kp S    &kp D   &kp F   &kp G                                                                                        &kp H   &kp J   &kp K      &kp L     &as SEMI  &as SQT
+&kp LEFT_SHIFT    &kp Z     &kp X    &kp C   &kp V   &kp B   &kp LSHFT         &kp LCTRL    &mo 1     &kp LGUI          &kp TAB  &kp TAB          &kp N   &kp M   &as COMMA  &as DOT   &kp FSLH  &as NON_US_BACKSLASH
+&magic 3 0        &kp HOME  &kp END  &mo 1   &mo 2           &kp LEFT_COMMAND  &lt 2 SPACE  &kp LALT  &kp LEFT_CONTROL  &kp RET  &lt 1 BACKSPACE          &kp UP  &kp DOWN   &as LBKT  &as RBKT  &kp PG_DN
             >;
         };
 
