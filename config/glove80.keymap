@@ -20,7 +20,7 @@
 #define FACTORY_TEST 3
 
 / {
-    tapping-term-ms = <300>;
+    tapping-term-ms = <160>;
 
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
