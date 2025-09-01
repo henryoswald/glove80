@@ -149,12 +149,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp ESCAPE        &kp F2  &kp F3          &kp F4              &kp F5                                                                                                                            &kp F6             &kp F7               &kp F8           &kp F9    &kp F10
-&kp GRAVE         &as N1  &as N2          &as N3              &as N4            &as N5                                                                                     &as N6               &as N7             &as N8               &as N9           &as N0    &as MINUS
-&kp GRAVE         &kp Q   &kp W           &kp E               &kp R             &kp T                                                                                      &kp Y                &kp U              &kp I                &kp O            &kp P     &as EQUAL
-&kp LEFT_CONTROL  &kp A   &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &mt LEFT_COMMAND G                                                                         &mt RIGHT_COMMAND H  &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &as SEMI  &as SQT
-&kp LEFT_SHIFT    &kp Z   &kp X           &kp C               &kp V             &kp B               &kp LEFT_COMMAND  &lt 2 SPACE  &mo 1  &kp TAB  &kp BACKSPACE  &kp RET  &kp N                &kp M              &as COMMA            &as DOT          &as FSLH  &as NON_US_BACKSLASH
-&magic 3 0        &mo 1   &kp LEFT_ALT    &kp LEFT_CONTROL    &kp LEFT_SHIFT                        &lt 1 TAB         &lt 2 SPACE  &mo 1  &mo 1    &kp BACKSPACE  &kp RET                       &kp RIGHT_SHIFT    &kp RIGHT_CONTROL    &as RIGHT_ALT    &kp HASH  &kp PG_DN
+&kp ESCAPE        &kp F2  &kp F3        &kp F4            &kp F5                                                                                                 &kp F6           &kp F7             &kp F8         &kp F9    &kp F10
+&kp GRAVE         &as N1  &as N2        &as N3            &as N4          &as N5                                                                         &as N6  &as N7           &as N8             &as N9         &as N0    &as MINUS
+&kp GRAVE         &kp Q   &kp W         &kp E             &kp R           &kp T                                                                          &kp Y   &kp U            &kp I              &kp O          &kp P     &as EQUAL
+&kp LEFT_CONTROL  &kp A   &kp S         &kp D             &kp F           &kp G                                                                          &kp H   &kp J            &kp K              &kp L          &as SEMI  &as SQT
+&kp LEFT_SHIFT    &kp Z   &kp X         &kp C             &kp V           &kp B   &kp LEFT_COMMAND  &lt 2 SPACE  &mo 1  &kp TAB  &kp BACKSPACE  &kp RET  &kp N   &kp M            &as COMMA          &as DOT        &as FSLH  &as NON_US_BACKSLASH
+&magic 3 0        &mo 1   &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT          &lt 1 TAB         &lt 2 SPACE  &mo 1  &mo 1    &kp BACKSPACE  &kp RET          &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &as RIGHT_ALT  &kp HASH  &kp PG_DN
             >;
         };
 
